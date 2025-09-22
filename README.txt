@@ -1,4 +1,4 @@
-# Baovola ANDRIANARISOA – Portfolio
+##Baovola ANDRIANARISOA – Portfolio
 
 This repository hosts my personal **portfolio website**, built to showcase my projects in **Power Platform** (Power Apps, Power Automate, SharePoint, CI/CD Pipelines) as well as web development projects.
 
