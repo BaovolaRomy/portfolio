@@ -49,11 +49,6 @@ The portfolio is available here:
 
 ---
 
-## 📸 Preview
-![Portfolio Preview](images/Portfolio/github-portfolio-home.jpg)
-
----
-
 ## 🔧 Setup & Local Development
 Clone the repo and open `index.html` in your browser:
 
