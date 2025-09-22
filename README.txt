@@ -1,32 +1,78 @@
-Massively by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# Baovola ANDRIANARISOA – Portfolio
+
+This repository hosts my personal **portfolio website**, built to showcase my projects in **Power Platform** (Power Apps, Power Automate, SharePoint, CI/CD Pipelines) as well as web development projects.
+
+The website is based on the **Massively** template from [HTML5 UP](https://html5up.net/), customized and extended with additional sections, lightbox galleries, and project details.
+
+---
+
+## 🚀 Live Demo
+The portfolio is available here:  
+👉 [https://BaovolaRomy.github.io/portfolio](https://BaovolaRomy.github.io/portfolio)
+
+---
+
+## 📂 Project Structure
+├── index.html # Main portfolio page
+├── assets/ # CSS, JS, fonts
+│ ├── css/
+│ ├── js/
+│ └── ...
+├── images/ # Project screenshots & logos
+│ ├── TF/ # Talent Flow app images
+│ ├── FFRT/ # Finance vendor app images
+│ ├── Pipelines/ # CI/CD pipelines screenshots
+│ ├── EVAS/ # EVAS web app images
+└── README.md # This file
 
 
-This is Massively, a text-heavy, article-oriented design built around a huge background
-image (with a new parallax implementation I'm testing) and scroll effects (powered by
-Scrollex). A *slight* departure from all the one-pagers I've been doing lately, but one
-that fulfills a few user requests and makes use of some new techniques I've been wanting
-to try out. Enjoy it :)
+---
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+## ✨ Features
+- **Responsive design** using the Massively template (HTML5 UP).
+- **Project showcase** with dedicated sections for:
+  - Power Apps & Power Automate
+  - SharePoint
+  - Pipelines (CI/CD)
+  - Other projects (EVAS, Portfolio itself…)
+- **Lightbox galleries** for project details (navigate images with arrows).
+- **Contact section** with email and social links.
+- Hosted on **GitHub Pages**.
 
-(* = not included)
+---
 
-AJ
-aj@lkn.io | @ajlkn
+## 🛠️ Tech Stack
+- HTML5 / CSS3 / JavaScript
+- Massively template (HTML5 UP)
+- jQuery (from the original theme)
+- GitHub Pages for deployment
+
+---
+
+## 📸 Preview
+![Portfolio Preview](images/Portfolio/github-portfolio-home.jpg)
+
+---
+
+## 🔧 Setup & Local Development
+Clone the repo and open `index.html` in your browser:
+
+```bash
+git clone https://github.com/BaovolaRomy/portfolio.git
+cd portfolio
+open index.html   # or double-click index.html
+https://BaovolaRomy.github.io/portfolio/
+
+📬 Contact
+
+Email: baoromy@icloud.com
+
+LinkedIn: Baovola Andrianarisoa
+
+GitHub: BaovolaRomy
 
 
-Credits:
+---
 
-	Demo Images:
-		Unsplash (unsplash.com)
+👉 Do you want me to also include a **section with screenshots of each project** (Talent Flow, FFRT, Pipelines, EVAS) directly in the README, so recruiters can preview them without opening the site?
 
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other:
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
