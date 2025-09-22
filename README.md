@@ -13,6 +13,7 @@ The portfolio is available here:
 ---
 
 ## 📂 Project Structure
+
 ├── index.html # Main portfolio page
 ├── assets/ # CSS, JS, fonts
 │ ├── css/
