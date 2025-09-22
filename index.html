@@ -1,9 +1,5 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>Baovola's Portfolio</title>
@@ -114,9 +110,7 @@
 								<header>
 									<h2>Documents & Lists (HR)</h2>
 								</header>
-								<!--<a href="talent-flow.html#sharepoint" class="image fit">-->
 									<img class="image fit" src="images/TF/CatalogListSharepoint.jpg" alt="SharePoint documents library for HR" />
-								</a>
 								<p>Centralized document libraries and lists to support onboarding/offboarding workflows.</p>
 								<ul class="actions special">
 									<li><a href="javascript:void(0)" class="button" onclick="openGallery('sptf',0)">Details</a></li>
@@ -127,7 +121,6 @@
 								<header>
 									<h2>Vendor Data (Finance)</h2>
 								</header>
-								<!--<a href="ffrt.html#sharepoint" class="image fit">-->
 									<img class="image fit" src="images/TF/DetailsListsharepoint.jpg" alt="SharePoint lists for vendor data" />
 								
 								<p>Structured vendor data with SharePoint lists and permissions for auditability.</p>
@@ -146,9 +139,8 @@
 								<header>
 									<h2>Power Platform Pipelines — CI/CD</h2>
 								</header>
-								<!--<a href="pipelines.html" class="image fit">-->
 									<img class="image fit" src="images/Pipelines/Solutions_Dev.png" alt="Pipelines overview" />
-								</a>
+								
 								<p>Automated deployments from Dev to UAT to Prod with governance and reusable documentation.</p>
 								<ul>
 									<li><strong>Tech:</strong> Power Platform Pipelines</li>
@@ -160,18 +152,6 @@
 								</ul>
 							</article>
 
-							<!--<article>
-								<header>
-									<h2>Promotion Flow (Dev → UAT → Prod)</h2>
-								</header>
-								<a href="pipelines.html#promotion" class="image fit">
-									<img class="image fit" src="images/pipelines-promotion.jpg" alt="Promotion flow diagram" />
-								
-								<p>Promotion strategy, approvals and validations for consistent releases.</p>
-								<ul class="actions special">
-									<li><a href="pipelines.html#promotion" class="button">Details</a></li>
-								</ul>
-							</article>-->
 						</section>
 
 						<!-- OTHER PROJECT -->
@@ -197,7 +177,7 @@
 								</ul>
 							</article>
 
-							<article>
+					<article>
   						<header>
     						<h2>Portfolio – GitHub</h2>
   						</header>
@@ -211,25 +191,13 @@
     								<li><strong>Impact:</strong> Professional online presence, accessible to recruiters and clients.</li>
   								</ul>
 
-  <ul class="actions special">
-    <!-- If you want a lightbox gallery -->
-    <li><a href="javascript:void(0)" class="button" onclick="openGallery('portfolio', 0)">Details</a></li>
-    <!-- Or if you prefer a direct GitHub link:
-    <li><a href="https://github.com/BaovolaRomy" class="button">View on GitHub</a></li>
-    -->
-  </ul>
-</article>
+  								<ul class="actions special">
+									<li><a href="javascript:void(0)" class="button" onclick="openGallery('portfolio', 0)">Details</a></li>
+								</ul>
+					</article>
 
-						</section>
+				</section>
 
-						
-						<!--
-						<footer>
-							<div class="pagination">
-								<a href="#" class="page active">1</a>
-							</div>
-						</footer>
-						-->
 
 					</div>
 
@@ -372,10 +340,10 @@
   prevBtn.addEventListener('click', () => show(idx - 1));
   nextBtn.addEventListener('click', () => show(idx + 1));
 
-  // Ferme si on clique l'overlay (pas l'image ni les flèches)
+  
   lb.addEventListener('click', (e) => { if (e.target === lb) closeLightbox(); });
 
-  // Clavier
+  
   window.addEventListener('keydown', (e) => {
     if (!lb.classList.contains('open')) return;
     if (e.key === 'Escape') closeLightbox();

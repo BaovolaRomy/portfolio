@@ -4691,11 +4691,11 @@ input, select, textarea {
 #lb-overlay{
   position: fixed; inset: 0;
   background: rgba(0,0,0,.9);
-  display: none;                 /* caché par défaut */
+  display: none;                 
   align-items: center; justify-content: center;
-  z-index: 10010;                /* au-dessus du #navPanel (10002) */
+  z-index: 10010;              
 }
-#lb-overlay.open{ display: flex; } /* visible quand .open est présent */
+#lb-overlay.open{ display: flex; } 
 
 #lb-overlay .lb-inner{
   position: relative;
@@ -4728,7 +4728,6 @@ input, select, textarea {
 
 .lb-nav:hover{ background: rgba(255,255,255,.3); }
 
-/* Empêcher le scroll en arrière-plan */
 body.lb-lock{ overflow: hidden; }
 
 
