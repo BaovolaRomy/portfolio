@@ -3243,7 +3243,7 @@ input, select, textarea {
   background-image:
     url("../../images/overlay.png"),                  /* motif léger */
     linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url("../../images/bg.jpg");                       /* TON image */
+    url("../../images/bg_v2.jpg");                       /* TON image */
 
   /* L’image recouvre sans déformation visible, et défile */
   background-size: auto, auto, cover;
