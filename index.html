@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+	
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -204,25 +205,31 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
+	<form id="contact-form" style="max-width: 500px; margin: 0 auto;">
+		<div class="fields" style="display: flex; flex-direction: column; gap: 1rem;">
+			<div class="field" style="display: flex; flex-direction: column;">
+				<label for="name">Name</label>
+				<input type="text" name="user_name" id="name" required />
+			</div>
+			<div class="field" style="display: flex; flex-direction: column;">
+				<label for="email">Email</label>
+				<input type="email" name="user_email" id="email" required />
+			</div>
+			<div class="field" style="display: flex; flex-direction: column;">
+				<label for="message">Message</label>
+				<textarea name="message" id="message" rows="3" required></textarea>
+			</div>
+		</div>
+
+		<input type="hidden" name="from_email" value="baoromy@icloud.com" />
+		<input type="hidden" name="subject" value="New message from portfolio" />
+
+		<ul class="actions" style="display: flex; justify-content: center;">
+			<li><button type="submit" class="primary">Send Message</button></li>
+		</ul>
+		<p id="form-status" style="margin-top:1rem; text-align:center;"></p>
+	</form>
+
 						</section>
 						<section class="split contact">
 							<section class="alt">
@@ -374,6 +381,33 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<!-- SDK -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+	(function () {
+		emailjs.init('EBQ0pOz9yCKVo4u9g');
+	})();
+
+	const form = document.getElementById('contact-form');
+	const status = document.getElementById('form-status');
+
+	form.addEventListener('submit', function (e) {
+		e.preventDefault();
+		status.textContent = 'Sending...';
+
+		emailjs.sendForm('service_pd9fikb', 'template_hhb1bg7', this)
+			.then(() => {
+				status.style.color = '#2e7d32';
+				status.textContent = '✅ Thank you! Your message has been sent.';
+				form.reset();
+			}, (err) => {
+				status.style.color = '#c62828';
+				status.textContent = '❌ Email failed. Check service credentials.';
+				console.error(err);
+			});
+	});
+</script>
 
 	</body>
 </html>
