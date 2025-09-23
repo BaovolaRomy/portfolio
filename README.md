@@ -59,6 +59,68 @@ cd portfolio
 open index.html   # or double-click index.html
 https://BaovolaRomy.github.io/portfolio/
 
+# Contact Form via EmailJS (GitHub Pages Friendly)
+
+This site uses **EmailJS** to send contact form submissions directly from the browser — no backend required.  
+Works on **GitHub Pages**.
+
+---
+
+## 1) Prerequisites
+
+- EmailJS account → https://www.emailjs.com/
+- An email service connected in EmailJS:
+  - **iCloud SMTP (recommended for your setup)**  
+    - Enable Apple ID **2FA**  
+    - Generate an **App-Specific Password** at https://appleid.apple.com/  
+    - SMTP settings:
+      - Host: `smtp.mail.me.com`
+      - Port: `587` + STARTTLS (or `465` + SSL if needed)
+      - Username: your full iCloud address (e.g. `baoromy@icloud.com`)
+      - Password: your **app-specific password** (not Apple ID password)
+- Create an **EmailJS Template** (e.g., `template_xxxxxx`)
+- Note your:
+  - **Service ID**: `service_xxxxxx`
+  - **Template ID**: `template_xxxxxx`
+  - **Public Key**: `YOUR_PUBLIC_KEY`
+
+---
+
+## 2) HTML Form
+
+Place this in your footer (or wherever your contact section lives):
+
+```html
+<form id="contact-form">
+  <div class="fields">
+    <div class="field">
+      <label for="name">Name</label>
+      <input type="text" name="user_name" id="name" required />
+    </div>
+    <div class="field">
+      <label for="email">Email</label>
+      <input type="email" name="user_email" id="email" required />
+    </div>
+    <div class="field">
+      <label for="message">Message</label>
+      <textarea name="message" id="message" rows="3" required></textarea>
+    </div>
+  </div>
+
+  <!-- iCloud requires the "From" to be your iCloud address -->
+  <input type="hidden" name="from_email" value="baoromy@icloud.com" />
+  <input type="hidden" name="subject" value="New message from portfolio" />
+
+  <!-- optional honeypot (spam protection) -->
+  <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" />
+
+  <ul class="actions">
+    <li><button type="submit" class="primary">Send Message</button></li>
+  </ul>
+  <p id="form-status" style="margin-top:1rem;"></p>
+</form>
+
+
 📬 Contact
 
 Email: baoromy@icloud.com
