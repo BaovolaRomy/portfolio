@@ -3226,26 +3226,38 @@ input, select, textarea {
 		z-index: 1;
 		overflow: hidden;
 	}
-/* Assure-toi d'avoir ça quelque part (c'est déjà le cas dans Massively) */
+
 #wrapper { position: relative; }
 
-/* Fond qui défile sur toute la page, sans trou en bas */
+/* Assure le contexte */
+#wrapper { position: relative; }
+
+/* Calque de fond qui défile avec la page */
 #wrapper > .bg {
-  position: fixed;
-  inset: 0;                /* équivaut à top:0; right:0; bottom:0; left:0; */
-  z-index: -1;
+  position:fixed;
+  inset: 0;                 /* top/right/bottom/left: 0 */
+  z-index: 0;               /* évite z-index négatif (bug iOS) */
+  pointer-events: none;     /* ne bloque pas les clics */
 
   background-color: #212931;
   background-image:
-    url("../../images/overlay.png"),                                /* motif */
-    linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.45)),      /* voile sombre */
-    url("../../images/bg.jpg");                                     /* ton image */
+    url("../../images/overlay.png"),                  /* motif léger */
+    linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("../../images/bg.jpg");                       /* TON image */
 
-  background-size: auto, auto, cover;       /* pas de déformation, recouvre */
+  /* L’image recouvre sans déformation visible, et défile */
+  background-size: auto, auto, cover;
   background-position: center, center, center;
   background-repeat: repeat, no-repeat, no-repeat;
-  background-attachment: scroll, scroll, scroll; /* le fond défile */
+  background-attachment: scroll, scroll, scroll;
 }
+
+/* S’assure que le contenu passe AU-DESSUS du fond */
+#wrapper > *:not(.bg) {
+  position: relative;
+  z-index: 1;
+}
+
 
 
 
