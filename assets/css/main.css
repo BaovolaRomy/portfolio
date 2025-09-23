@@ -3226,29 +3226,27 @@ input, select, textarea {
 		z-index: 1;
 		overflow: hidden;
 	}
+/* Assure-toi d'avoir ça quelque part (c'est déjà le cas dans Massively) */
+#wrapper { position: relative; }
+
+/* Fond qui défile sur toute la page, sans trou en bas */
 #wrapper > .bg {
-	 position:absolute; top: 0; left: 0; width: 100%; height: 100%; 
-	 background-color: #212931; 
-	 background-image: url("../../images/bg.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg"); 
-	 background-size: auto, auto, 100% auto; 
-	 background-position: center, center, top center; 
-	 background-repeat: repeat, no-repeat, no-repeat; 
-	 background-attachment: scroll, scroll, scroll; 
-	 z-index: -1; 
-	}
-
-
-
-			#wrapper > .bg {
-  position:absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-height: 100%; /* ← s’adapte à la hauteur totale */
+  position: fixed;
+  inset: 0;                /* équivaut à top:0; right:0; bottom:0; left:0; */
   z-index: -1;
-  background-size:c;
-  background-attachment: scroll; /* ← l’image défile avec le contenu */
+
+  background-color: #212931;
+  background-image:
+    url("../../images/overlay.png"),                                /* motif */
+    linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.45)),      /* voile sombre */
+    url("../../images/bg.jpg");                                     /* ton image */
+
+  background-size: auto, auto, cover;       /* pas de déformation, recouvre */
+  background-position: center, center, center;
+  background-repeat: repeat, no-repeat, no-repeat;
+  background-attachment: scroll, scroll, scroll; /* le fond défile */
 }
+
 
 
 		#wrapper.fade-in:before {
